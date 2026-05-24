@@ -118,6 +118,43 @@ export default function Home() {
           tools, multi-voice tonal shift on red flags, Slack and Resend for
           nurse and patient comms.
         </p>
+
+        {/* How it works */}
+        <div className="mt-16 w-full max-w-5xl">
+          <h3 className="text-2xl font-semibold text-slate-900 mb-6">
+            How it works
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+              <p className="text-base font-semibold text-blue-600 mb-3">
+                Voice + telephony
+              </p>
+              <p className="text-base text-slate-700">
+                ElevenLabs Agents on Twilio. The agent dials out, runs the
+                check-in, and hangs up.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+              <p className="text-base font-semibold text-blue-600 mb-3">
+                Deterministic classifier
+              </p>
+              <p className="text-base text-slate-700">
+                A Convex function decides stable / monitoring / escalate from
+                hard rules. The LLM asks; the function decides.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+              <p className="text-base font-semibold text-blue-600 mb-3">
+                Full-context hand-off
+              </p>
+              <p className="text-base text-slate-700">
+                On red flag, the on-call nurse gets a Slack message with
+                patient name, procedure, day of recovery, and the triggering
+                symptom.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Screen 3 — Live Demo */}
