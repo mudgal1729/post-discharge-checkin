@@ -80,74 +80,68 @@ export default function Home() {
       </section>
 
       {/* Screen 2 — What I built */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-white">
+      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-16 bg-white">
         <div className="flex flex-col items-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-center text-slate-900">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900">
             What I built
           </h2>
-          <span className="mt-4 h-1 w-20 rounded-full bg-blue-600" aria-hidden />
+          <span className="mt-3 h-1 w-16 rounded-full bg-blue-600" aria-hidden />
         </div>
 
-        <div className="mt-20 w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-10 transition-transform hover:-translate-y-1">
-            <div className="text-7xl md:text-8xl font-bold text-blue-600 tracking-tight">
-              90<span className="text-4xl md:text-5xl text-blue-400">s</span>
+        <div className="mt-10 w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-6 transition-transform hover:-translate-y-1">
+            <div className="text-5xl md:text-6xl font-bold text-blue-600 tracking-tight">
+              90<span className="text-3xl md:text-4xl text-blue-400">s</span>
             </div>
-            <div className="mt-4 text-xl text-slate-700">per check-in</div>
+            <div className="mt-2 text-base md:text-lg text-slate-700">per check-in</div>
           </div>
-          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-10 transition-transform hover:-translate-y-1">
-            <div className="text-7xl md:text-8xl font-bold text-blue-600 tracking-tight">
+          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-6 transition-transform hover:-translate-y-1">
+            <div className="text-5xl md:text-6xl font-bold text-blue-600 tracking-tight">
               5
             </div>
-            <div className="mt-4 text-xl text-slate-700">
+            <div className="mt-2 text-base md:text-lg text-slate-700">
               screening questions,<br />deterministic classifier
             </div>
           </div>
-          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-10 transition-transform hover:-translate-y-1">
-            <div className="text-7xl md:text-8xl font-bold text-blue-600 tracking-tight">
+          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-6 transition-transform hover:-translate-y-1">
+            <div className="text-5xl md:text-6xl font-bold text-blue-600 tracking-tight">
               3
             </div>
-            <div className="mt-4 text-xl text-slate-700">
+            <div className="mt-2 text-base md:text-lg text-slate-700">
               named outcomes:<br />stable, monitoring, escalate
             </div>
           </div>
         </div>
 
-        <p className="mt-20 text-2xl italic text-slate-600 max-w-4xl text-center leading-relaxed">
-          ElevenAgents orchestration on Twilio, Convex backend for state and
-          tools, multi-voice tonal shift on red flags, Slack and Resend for
-          nurse and patient comms.
-        </p>
-
-        {/* How it works */}
-        <div className="mt-16 w-full max-w-5xl">
-          <h3 className="text-2xl font-semibold text-slate-900 mb-6">
+        {/* How it works — vertical stack, label-left / value-right */}
+        <div className="mt-16 w-full max-w-5xl bg-slate-50 border border-slate-200 rounded-3xl px-6 py-8 md:px-10">
+          <h3 className="text-xl md:text-2xl font-semibold text-slate-900 mb-6 text-center">
             How it works
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-              <p className="text-base font-semibold text-blue-600 mb-3">
+          <div className="flex flex-col divide-y divide-slate-200">
+            <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+              <p className="text-base md:text-lg font-semibold text-blue-600">
                 Voice + telephony
               </p>
-              <p className="text-base text-slate-700">
+              <p className="text-base text-slate-700 leading-snug">
                 ElevenLabs Agents on Twilio. The agent dials out, runs the
                 check-in, and hangs up.
               </p>
             </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-              <p className="text-base font-semibold text-blue-600 mb-3">
+            <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+              <p className="text-base md:text-lg font-semibold text-blue-600">
                 Deterministic classifier
               </p>
-              <p className="text-base text-slate-700">
+              <p className="text-base text-slate-700 leading-snug">
                 A Convex function decides stable / monitoring / escalate from
                 hard rules. The LLM asks; the function decides.
               </p>
             </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-              <p className="text-base font-semibold text-blue-600 mb-3">
+            <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+              <p className="text-base md:text-lg font-semibold text-blue-600">
                 Full-context hand-off
               </p>
-              <p className="text-base text-slate-700">
+              <p className="text-base text-slate-700 leading-snug">
                 On red flag, the on-call nurse gets a Slack message with
                 patient name, procedure, day of recovery, and the triggering
                 symptom.
