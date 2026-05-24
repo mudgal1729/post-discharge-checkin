@@ -68,11 +68,11 @@ export default function Home() {
           for post-surgery patient check-ins.
         </p>
         <p className="relative mt-12 text-2xl leading-relaxed text-slate-600 max-w-4xl">
-          Hospital chains run 200,000+ post-discharge follow-up calls a year,
-          handled manually by 10+ nurses on phones. Most are routine status
-          confirmations. AfterCare takes the routine 80% off the queue,
-          escalating only the genuine red flags to the on-call nurse, in real
-          time.
+          India's top hospital chains discharge over 2 million inpatients a
+          year. Most don't get a structured follow-up call in the critical
+          24-to-72-hour window, and the genuine red flags become ER visits days
+          later. AfterCare closes that gap by running the routine check-ins
+          automatically and escalating only the cases that need a nurse.
         </p>
         <div className="relative mt-20 text-3xl text-slate-300" aria-hidden>
           ↓
